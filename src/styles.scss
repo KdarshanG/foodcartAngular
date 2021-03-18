@@ -1,1 +1,198 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+
+$primary-color: #e46d47;
+$secondary-color:#aad8aa;
+$font-color: #3d4152;
+// $font-family: ProximaNova,Arial,Helvetica Neue,sans-serif;
+// $font-family: 'Open Sans', sans-serif;
+$font-family: 'RocknRoll One', sans-serif;
+$text-font-family: 'Open Sans', sans-serif;
+
+
+
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing:border-box;
+   font-family: $font-family;
+   text-transform: uppercase;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+a{
+   text-decoration: none;
+}
+
+li{
+   list-style-type: none;
+}
+
+.shadow{
+   box-shadow: 0px 2px 3px;
+}
+#app-title{
+   color: $primary-color;
+}
+
+// header-css-starts
+.cart-logo{
+   text-decoration: none;
+
+   .fa-shopping-cart{
+    color: $primary-color;  
+ }
+ .text-cart{
+    color: $font-color;  
+ }
+    &:hover{
+        text-decoration: none;
+        .text-cart{
+            color: $primary-color;  
+         }
+        
+    }
+}
+
+
+
+
+div{
+    ul{
+        list-style-type: none;
+        
+        li{
+            margin-right: 24px;
+            
+            a{
+                color: $font-color !important;
+                text-decoration: none;
+
+                &:hover{
+                    color: $primary-color !important;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.navbar-toggler{
+    cursor: pointer !important;
+    
+    &:hover{
+        color: $primary-color;
+    }
+}
+
+
+
+
+//carousel-start
+
+.carousels{
+    width: 100%;
+    height: 450px;
+ }
+ 
+ .carousel-item img{
+    width: 100%;
+    height: 400px;
+ }
+
+ //carousel-end
+
+
+
+// header-css-ends
+
+// main-div-starts
+
+    //side-nav
+    
+    #ajapro{
+        color: $primary-color !important;
+    }
+    nav{
+
+        a{
+            font-family: $text-font-family !important;  
+            color: $font-color;
+            font-weight: bold;
+            &:hover{
+                color: $primary-color;
+             }
+        }
+       
+    }
+
+    .accordion-button{
+        background-color: $primary-color !important;
+        opacity: 0.9;
+        color: white !important;
+    }
+
+
+    span{
+    .check{
+        label{
+        &:hover{
+            cursor: pointer;
+            color: $primary-color !important;
+        }
+    }
+    }
+}
+   
+    //main-div-content
+
+    
+
+    .card{
+
+        .btn-outline{
+            color: $primary-color;
+            box-shadow: 1px 1px 3px $secondary-color;
+        }
+
+
+        &:hover{
+            border: 0.1rem solid $primary-color;
+            // box-shadow: 0px 0px 1px $primary-color;
+        }
+
+        .btn-outline{
+            &:hover{
+                border-color: $primary-color;
+                color: $primary-color;
+            }
+        }
+
+    }
+
+
+    //main-div-ends
+
+
+    //footer-start
+
+
+    .footer{
+        background: linear-gradient(to bottom, white, $primary-color);
+
+        a{
+        font-family: $text-font-family !important;
+        }
+    }
+
+
+
+
