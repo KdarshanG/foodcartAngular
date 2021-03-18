@@ -1,0 +1,141 @@
+<div class="container mt-4 mb-2 d-flex justify-content-center">
+    <div class="carousels">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators text-dark">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="4500">
+            <img src="./assets//pic4.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4500">
+            <img src="./assets/pic2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4500">
+            <img src="./assets/pic3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="container-fluid col-sm-3">
+  
+
+          <div class="display-6 font-weight-bold" id="ajapro">AjaPro</div>
+
+          
+            <div class="accordion mt-3 mb-3 border navbar-default navbar-static border mt-3 shadow navbar-light bg-light sticky-sm-top" id="accordionExample">
+              <div class="accordion-item">
+                <div class="h4 font-weight-bold mt-3 mb-4" id="filter">Filters</div>
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Vegetarian
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <nav class="nav nav-pills flex-column">
+                      <span class="text-muted"><input type="checkbox" id="vegBreakfast" name="veg-Breakfast"
+                          value="breakfast" class="check"><label for="vegBreakfast">Breakfast</label></span>
+                      <span class="text-muted"><input type="checkbox" id="vegStarters" name="veg-Starters"
+                          value="starters" class="check"><label for="vegStarters">Starters</label></span>
+                      <span class="text-muted"><input type="checkbox" id="vegMainCourse" name="veg-MainCourse"
+                          value="maincourse" class="check"><label for="vegMainCourse">MainCourse</label></span>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Non-Vegetarian
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <nav class="nav nav-pills flex-column">
+                      <span class="text-muted"><input type="checkbox" id="nonVegStarters" name="nonVeg-Starters"
+                          value="nonvegstarters" class="check"><label for="nonVegStarters">Starters</label></span>
+                      <span class="text-muted"><input type="checkbox" id="nonVegMainCourse" name="nonVeg-MainCourse"
+                          value="nonvegmaincourse" class="check"><label for="nonVegMainCourse">MainCourse</label></span>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Desserts
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <nav class="nav nav-pills flex-column">
+                      <span class="text-muted"><input type="checkbox" id="dessert" name="desserts"
+                          value="desserts" class="check"><label for="dessert">Desserts</label></span>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+          <!-- </nav> -->
+      <!-- </div> -->
+
+      <!--side-navbar-ends-->
+
+
+      <!--main div cards logic starts-->
+      <div class="col-sm-9 border" id="cars">
+       <div class="row">
+        <div class="card col-sm-4" *ngFor="let card of itemList;let i = index;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{card.name}}</h5>
+              <p class="card-text">{{card.description}}</p>
+              <a href="#" class="btn btn-success">Submit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- main div cards logic ends-->
+    </div>
+
+    </div>
