@@ -124,8 +124,8 @@
       <!--main div cards logic starts-->
       <div class="col-sm-9 border" id="cars">
        <div class="row">
-        <div class="card col-sm-4" *ngFor="let card of itemList;let i = index;">
-            <img src="assets/idli-1.jpg" class="card-img-top" alt="...">
+        <div class="card col-sm-4" *ngFor="let card of itemLists;let i = index;">
+            <img [src]="[card.imgpath[0]]" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{card.name}}</h5>
               <p class="card-text">{{card.description}}</p>
