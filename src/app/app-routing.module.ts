@@ -9,9 +9,9 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: ListingPageComponent },
-  { path: 'home/landingPage/:id', component: LandingPageComponent },
+  { path: 'landingPage/:id', component: LandingPageComponent },
   { path: 'home/landingPage/card/:id', component: CartPageComponent },
-  { path: 'home/landingPage/card/:id/cartPage', component: CartPageComponent },
+  // { path: 'home/landingPage/card/:id/cartPage', component: CartPageComponent },
 
   { path: '**', component: PageNotFoundComponent}
 ];
