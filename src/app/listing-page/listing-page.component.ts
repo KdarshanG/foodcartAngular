@@ -20,6 +20,7 @@ export class ListingPageComponent implements OnInit {
   getAllItem(){
     this.commonService.getAllItems().subscribe((resp)=>{
         this.itemLists = resp;
+        
     })
   }
 

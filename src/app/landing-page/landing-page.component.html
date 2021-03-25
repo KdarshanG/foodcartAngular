@@ -22,12 +22,12 @@
         </div>
 
         <div>
-          <a type="submit" [routerLink]="['\cartPage']" class="btn btn-success" id="addToCart">add to cart</a>
+          <a type="submit" (click)="addToCart(data)" class="btn btn-success" id="addToCart">add to cart</a>
         </div>
       </div>
     </div>
     <hr>
-    <div class="row mt-3 ml-2 border">
+    <div class="row mt-3 ml-2 pb-2 border">
       <h4>Description:</h4>
       <div><hr></div>
       <div id="description" class="pl-5">
@@ -37,8 +37,13 @@
     <div class="row mt-3 ml-2 border">
       <h4>Review</h4>
       <div><hr></div>
-      <div id="comment" class="pl-5" >
-
+      <div id="comment" class="pl-5" *ngFor="let view of data.comments">
+        <div class="d-flex justify-content-between" >
+          <p><b><span>By: {{view.reviewedBy}}</span></b><p>
+          <p class="text-muted pr-3">{{view.reviewedDate}}</p>
+          </div>
+          <p><span> {{view.review}}</span></p>
+          <hr>
       </div>
 
 
