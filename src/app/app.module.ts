@@ -12,6 +12,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ListingPageComponent } from './listing-page/listing-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     LandingPageComponent,
     PageNotFoundComponent,
     ListingPageComponent,
-    CartPageComponent
+    CartPageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

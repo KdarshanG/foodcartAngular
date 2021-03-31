@@ -155,8 +155,8 @@
         }
       ],
       "imgpath": [
-        "assets/at-1.jpg",
-        "assets/at-2.jpg"
+        "assets/at-2.jpg",
+        "assets/at-1.jpg"
       ]
     },
     {
@@ -344,8 +344,8 @@
         }
       ],
       "imgpath": [
-        "assets/cchicken-1.jpg",
-        "assets/cchicken-2.jpg"
+        "assets/bchicken-2.jpg",
+        "assets/bchicken-1.jpg"
       ]
     },
     {
@@ -484,15 +484,5 @@
       ]
     }
   ],
-  "cart": [
-    {
-      "itemId": 6,
-      "name": "aloo tikki",
-      "img": "assets/at-1.jpg",
-      "price": 100,
-      "type": "starters",
-      "veg": true,
-      "id": 9
-    }
-  ]
+  "cart": []
 }

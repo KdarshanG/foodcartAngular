@@ -67,12 +67,12 @@
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                     <nav class="nav nav-pills flex-column">
-                      <span class="text-muted"><input type="checkbox" id="vegBreakfast" name="veg-Breakfast"
-                          value="breakfast" class="check"><label for="vegBreakfast">Breakfast</label></span>
-                      <span class="text-muted"><input type="checkbox" id="vegStarters" name="veg-Starters"
-                          value="starters" class="check"><label for="vegStarters">Starters</label></span>
-                      <span class="text-muted"><input type="checkbox" id="vegMainCourse" name="veg-MainCourse"
-                          value="maincourse" class="check"><label for="vegMainCourse">MainCourse</label></span>
+                      <span class="text-muted"><input type="checkbox" id="vegBreakfast" name="breakfast"
+                          value="breakfast" class="check" (change)="getAlbumId($event,'breakfast')"><label for="vegBreakfast">Breakfast</label></span>
+                      <span class="text-muted"><input type="checkbox" id="vegStarters" name="starters"
+                          value="starters" class="check" (change)="getAlbumId($event,'starters')"><label for="vegStarters">Starters</label></span>
+                      <span class="text-muted"><input type="checkbox" id="vegMainCourse" name="maincourse"
+                          value="maincourse" class="check" (change)="getAlbumId($event,'maincourse')"><label for="vegMainCourse">MainCourse</label></span>
                     </nav>
                   </div>
                 </div>
@@ -89,9 +89,9 @@
                   <div class="accordion-body">
                     <nav class="nav nav-pills flex-column">
                       <span class="text-muted"><input type="checkbox" id="nonVegStarters" name="nonVeg-Starters"
-                          value="nonvegstarters" class="check"><label for="nonVegStarters">Starters</label></span>
+                          value="nonvegstarters" class="check" (change)="getAlbumId($event,'nonvegstarters')"><label for="nonVegStarters">Starters</label></span>
                       <span class="text-muted"><input type="checkbox" id="nonVegMainCourse" name="nonVeg-MainCourse"
-                          value="nonvegmaincourse" class="check"><label for="nonVegMainCourse">MainCourse</label></span>
+                          value="nonvegmaincourse" class="check" (change)="getAlbumId($event,'nonvegmaincourse')"><label for="nonVegMainCourse">MainCourse</label></span>
                     </nav>
                   </div>
                 </div>
@@ -108,7 +108,7 @@
                   <div class="accordion-body">
                     <nav class="nav nav-pills flex-column">
                       <span class="text-muted"><input type="checkbox" id="dessert" name="desserts"
-                          value="desserts" class="check"><label for="dessert">Desserts</label></span>
+                          value="desserts" class="check" (change)="getAlbumId($event,'desserts')"><label for="dessert">Desserts</label></span>
                     </nav>
                   </div>
                 </div>
@@ -124,13 +124,31 @@
       <!--main div cards logic starts-->
       <div class="col-sm-9 border" id="cars">
        <div class="row">
-        <div class="card col-sm-4" *ngFor="let card of itemLists;let i = index;">
-            <img [src]="[card.imgpath[0]]" class="card-img-top" alt="...">
+        <div class="col-sm-5 col-lg-4 offset-md-1 offset-lg-0 card p-3 mb-5" *ngFor="let card of itemLists;let i = index;">
+          <!-- <div class="col-sm-5 col-lg-4 offset-md-1 offset-lg-0 card p-3  mb-5"> -->
+            <img [src]="[card.imgpath[0]]" class="card-img-top food-image-path shadow pt-2" height="200px" widht="100px" alt="...">
+            <div class="card-body p-2">
+            <div class="row card-title-com ">
+                <h6 class="card-title col-8  pl-1">{{card.name}}</h6>
+                <h6 class="col-4 veg d-flex justify-content-end "  id="cat" >{{card.veg ? 'veg':'nonVeg'}}</h6>
+            </div>    
+                <div class="row d-flex flex-row flex-wrap ">
+                <div class="col-1 food-rating"><p class="card-text"><span class="type">{{card.rating}}</span></p></div>
+                <div class="col-2 star-img pl-0"><img src="./assets/rating-star-icon-11-256.png" style="margin-bottom:5px" height="25px" width="25px"></div>
+                </div>
+                <h6 class="card-text pt-1"><span class="type">{{card.type}}</span></h6>
+                <h6 class="card-text pb-1">spice-level: <span class="level ">{{card["spice-level"]}}</span></h6>
+                <!-- <button type="submit" class="btn btn-success" onclick="valueSender({{card.id}})">Quick View</button> -->
+              <button  class="btn btn-success" (click)="gotoLandingPage(card)">Quick View</button>
+
+            </div>
+        <!-- </div> -->
+            <!-- <img [src]="[card.imgpath[0]]" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{card.name}}</h5>
               <p class="card-text">{{card.description}}</p>
               <button href="#" class="btn btn-success" (click)="gotoLandingPage(card)">Quick View</button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

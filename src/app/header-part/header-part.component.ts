@@ -14,6 +14,10 @@ export class HeaderPartComponent implements OnInit {
   }
 
   goToCart(){
-    this.route.navigate(['/cart'])
+    this.route.navigate(['/cart']);
+  }
+
+  login(){
+    this.route.navigate(['/login']);
   }
 }

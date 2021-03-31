@@ -1,3 +1,4 @@
+import { LoginPageComponent } from './login-page/login-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { ListingPageComponent } from './listing-page/listing-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'home', component: ListingPageComponent },
   { path: 'landingPage/:id', component: LandingPageComponent },
   { path: 'cart', component: CartPageComponent },
+  { path: 'login', component:LoginPageComponent},
   { path: '**', component: PageNotFoundComponent}
 ];
 
