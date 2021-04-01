@@ -1,59 +1,58 @@
 <div class="container">
-    <div class="row flex-sm-row justify-content-between">
-        <div class="row justify-content-center">
-            <div class="col-sm-8 justify-content-left mt-5">
-                        <img class="img-control img-fluid mb-2" src="/src/assets/ajapro1.jpg" alt="">
-                    </div>
-                 </div>    
-                <div class="row justify-content-center">
-                    <div class="col-sm-8 pr-1 justify-content-left">
-                        <h2 class="head">Hey! Please login</h2>
-                    </div>
-                </div>
-  
-                <div class="row justify-content-center">
-                  <div class="col-sm-8 justify-content-left">
-                  <form  (ngSubmit)="onLogin()"  autocomplete="off">
-                    
-                    <div class="form-group">
-                      <label class="inputLabel">Email</label>
-                      <input type="email" class="form-control" formControlName="email" [class.is-invalid]="form.get('email').invalid && form.get('email').touched">
-                      <small class="text-danger" *ngIf="!form.controls['email'].valid && form.controls['email'].touched">
-                        Email is required
-                      </small>
-                    </div> 
-                
-                    <div class="form-group">
-                      <label class="inputLabel">Password</label>
-                      <input type="password" class="form-control" formControlName="password" id="password" [class.is-invalid]="form.get('password').invalid && form.get('password').touched">
-                      <small class="text-danger" *ngIf="!form.controls['password'].valid && form.controls['password'].touched justify-content-right">
-                        Password is required
-                      </small>
-                    </div> 
-                    
-                    <div class="mt-5 text-right">
-                      <div id="passwordHelp1" class="form-text pt-0 m-0"><a href="forgotPassword()">Forgot your password?</a></div>
-                    </div>
-                    <button class="btn btn-primary w-100 mb-2" type="submit" [disabled]="form.invalid">LOGIN</button>
-  
-                  </form>
-                  <div>
-                    <h2 class="text-lg ">Don't have an account?</h2>
-                    <h2 class="text-lg lead">Create one in just a few second!</h2>
-                  </div>
-  
-                  <div class="row">
-                    <div class="col-sm-8 justify-content-left">
-                        <button type="button" class="btn btn-default btn-lg shadow signUp mb-5" (click)="signUpLoader()"><span
-                                class="signUpForFree">Sign Up for Free</span></button>
-                    </div>
-                </div>
-                </div>
-               </div> 
-                
-            
-        
+   <div class="row justify-content-center">
+      <div class="col-sm-8 d-flex justify-content-center">
+        <img class="img-control img-fluid" src="assets/ajapro1.jpg" alt="">
+      </div>
+    </div>
+  <div class="row flex-sm-row justify-content-between">
+    <div class="row justify-content-center">
+      <div class="col-sm-8 mb-4 d-flex justify-content-center">
+        <h2 class="head">Hey! Please login</h2>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-sm-8 justify-content-left">
+        <form [formGroup]="form" (ngSubmit)="onLogin()" autocomplete="off">
+
+          <div class="form-group">
+            <label class="inputLabel">Email</label>
+            <input type="email" class="form-control" formControlName="email"
+              [class.is-invalid]="form.get('email').invalid && form.get('email').touched">
+            <small class="text-danger" *ngIf="!form.controls['email'].valid && form.controls['email'].touched">
+              Email is required
+            </small>
+          </div>
+
+          <div class="form-group">
+            <label class="inputLabel">Password</label>
+            <input type="password" class="form-control" formControlName="password" id="password"
+              [class.is-invalid]="form.get('password').invalid && form.get('password').touched">
+            <small class="text-danger"
+              *ngIf="!form.controls['password'].valid && form.controls['password'].touched justify-content-right">
+              Password is required
+            </small>
+          </div>
+
+          <div class="mt-5 text-right">
+            <div id="passwordHelp1" class="form-text pt-0 m-0"><a href="forgotPassword()">Forgot your password?</a>
+            </div>
+          </div>
+          <button class="btn btn-primary w-100 mb-2" type="submit" [disabled]="form.invalid">LOGIN</button>
+
+        </form>
+        <div>
+          <h2 class="text-lg ">Don't have an account?</h2>
+          <h2 class="text-lg lead">Create one in just a few second!</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-8 justify-content-left">
+            <button type="button" class="btn btn-default btn-lg shadow signUp mb-5" (click)="signUpLoader()"><span
+                class="signUpForFree">Sign Up for Free</span></button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-    
-  
+</div>
